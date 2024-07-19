@@ -14,6 +14,7 @@ const PRIVATE_APP_ACCESS = process.env.ACCESS_TOKEN;
 
 // * Code for Route 1 goes here
 app.get('/headsets', async (req, res) => {
+    // console.log('Headsets route access token:', process.env.ACCESS_TOKEN);
     const headsets = 'https://api.hubspot.com/crm/v3/objects/headsets?properties=name,brand,price';
     const headers = {
         Authorization: `Bearer ${PRIVATE_APP_ACCESS}`,
